@@ -5,7 +5,6 @@ pipeline {
         stage('Init') {
             steps {
                 sh 'docker stop nodejs-project || true'
-                sh 'docker rmi $(docker images) || true'
                 sh 'docker rm nodejs-project || true'
             }
         }
