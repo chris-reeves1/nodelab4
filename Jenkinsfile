@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'docker build -t nodejs-project:${BUILD_NUMBER} .'
+                sh 'docker build -t nodejs-project:latest .'
             }
         }
 
